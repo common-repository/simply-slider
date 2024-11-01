@@ -1,0 +1,505 @@
+/* => SLIDER <= */
+#simplyslider-wrap {
+position: relative;
+margin: 0;
+}
+#simplyslider {
+position: relative;
+}
+/* => THE SLIDES <= */
+.simplyslider .simplyslide-cont {
+display: none;
+}
+.simplyslider .simplyslide-cont.first {
+display: block;
+} 
+.simplyslider-sections, .simplyslider-sections .simplyslide-cont {
+width: 100%; 
+height: 100%;
+} 
+/* => SET SLIDES HEIGHT AND MAKE RESPONSIVE <= */ 
+.simplyslider-sections {
+margin: 0 auto; 
+position: relative;    
+width: 100%;
+height: 0;
+padding-bottom: 70%;
+}
+/* => SET SLIDES POSITION ABSOLUTE <= */
+.simplyslider-sections .simplyslide-cont {
+position: absolute; 
+top: 0; 
+left: 0; 
+}
+/* => SLIDES CONTAINER <= */
+.simplyslide-cont {
+overflow: hidden;
+}
+/* => SLIDES BACKGROUND IMAGE HOLDER <= */
+.simplysliderimg-background {
+width: 100%;
+height: 100%;
+position: absolute;
+overflow: hidden;
+}
+.simplysliderimg-background:after { /* add the transparent pattern overlay */
+background: #333333;
+content: "";
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+top: 0;
+opacity: 0.3;
+}
+/* => SLIDES BACKGROUND IMAGE HOLDER <= */
+.simplysliderimg-background-overlay {
+width: 100%;
+height: 100%;
+position: absolute;
+overflow: hidden;
+} 
+/* => SLIDES TEXT & LOGO <= */
+.simplyslide-content h1.simplyslider {
+  font-size:5.5em;
+  margin:0.4em 0;
+  text-transform: uppercase;
+}
+.simplyslide-content h2.simplyslider {
+	margin: 0 0 26px;
+  position: relative;
+  text-align: center;
+}
+p.simplyslidetextline1 span {
+  font-size:1.6em;
+  line-height:1.8em;
+  font-weight:300;
+  position: relative;
+  text-align: center;
+}
+p.simplyslidetextline2 span {
+  font-size:1.6em;
+  line-height:1.8em;
+  font-weight:300;
+  position: relative;
+  text-align: center;
+}
+p.simplyslidetextline3 span {
+  font-size:1.6em;
+  line-height:1.8em;
+  font-weight:300;
+  position: relative;
+  text-align: center;
+}
+.simplyslide-content {
+margin: 0 auto;
+overflow: hidden;
+height: 100%;
+position: relative;
+text-align: center;
+top: 22%; 
+}
+.simplyslide-content h2.simplyslider,
+.simplyslide-content h3.simplyslider,
+.simplyslide-content h4.simplyslider,
+.simplyslide-content h5.simplyslider,
+.simplyslide-content h6.simplyslider,
+.simplyslide-content p.simplyslidetext {
+color:#fff; 
+}
+.simplyslide-center {
+	padding-top: 20px;
+	padding-bottom: 20px;
+  overflow: hidden;
+}
+/* => SLIDE PREV/NEXT AND DOWN ARROWS <= */
+.simplyslider-prev,
+.simplyslider-next {
+    text-indent:-9999px;
+    width:38px;
+    height:38px;
+    background:url("../images/sprite.png") -263px -122px no-repeat;
+    position:absolute;
+    top:50%;
+    margin-top:-19px;
+    z-index:999;
+    opacity:.5;
+    -webkit-transition: all 0.3s ease-out;  /* Saf3.2+, Chrome */
+    -moz-transition: all 0.3s ease-out;  /* FF4+ */
+    -ms-transition: all 0.3s ease-out;  /* IE10? */
+    -o-transition: all 0.3s ease-out;  /* Opera 10.5+ */
+    transition: all 0.3s ease-out;
+		display: none;
+    }
+.simplyslider-prev { 
+left:12px; 
+}
+.simplyslider-next {
+    right:12px;
+    background-position:-302px -122px;
+}  
+.simplyslider-prev:hover,
+.simplyslider-next:hover {
+    opacity:1;
+}
+.simplysliderslidedown {
+	  text-align:center;
+    position:absolute;
+    top:43%;
+    left: 45%;
+    z-index:999;
+    margin: 0 0 0 12px;
+}
+/* => SLIDER NAV o o o <= */    
+ol.simplyslider-nav {
+    position:absolute;
+    top:92%;
+    left:50%;
+    list-style:none;
+    overflow:hidden;
+    padding:2px;
+    z-index:1000;
+		margin: 0 0 0 -26px;
+    display:inline-block;
+}
+ol.simplyslider-nav li {
+    float:left;
+}
+ol.simplyslider-nav li a {
+   display:block;
+   width:8px;
+   height:8px;
+   overflow:hidden;
+   padding:0px;
+   margin:8px 8px 8px 0;
+   background:url("../images/sprite.png") no-repeat -234px -144px;
+   text-decoration:none;
+   text-indent:-999px;
+   float: left;
+}
+.simplyslider-nav li a:hover,
+.simplyslider-nav li a.selected {
+background-position:-225px -144px;
+}
+
+/* ==========================================================================
+   Mobile styles
+   ========================================================================== */ 
+/* Landscape phones and down */
+@media (max-width: 480px) { 
+.simplyslide-content{
+margin: 30px auto 0 auto;
+overflow: hidden;
+height: 100%;
+position: relative;
+text-align: center;
+top: 35%;
+}
+.simplyslide-content h1.simplyslider {
+  font-size:1.2em;
+  line-height:1.0em;
+  margin:0;
+  text-transform: uppercase;
+}
+.simplyslide-content h2.simplyslider {
+	margin: 0 0 16px;
+  position: relative;
+  text-align: center;
+}
+.simplyslide-content p.simplyslidetext {
+  font-size:0.8em;
+  line-height:1.0em;
+  margin:0.2em 0 0 0;
+  font-weight:200;
+  position: relative;
+  text-align: center;
+}
+.simplyslide-content p.simplyslidetext span {
+  font-size:0.8em;
+  line-height:1.0em;
+  margin:0.2em 0 0 0;
+  font-weight:200;
+  position: relative;
+  text-align: center;
+}
+.simplyslides-container img.simplyslider{
+max-width: 43%;
+}
+.simplyslider-prev,
+.simplyslider-next {
+display: none;
+opacity:0;
+}
+.simplysliderslidedown{
+display:none;
+opacity:0;
+} 
+.simplysliderslidedown span i{
+display:none;
+opacity:0;
+} 
+.simplyslider-prev:hover,
+.simplyslider-next:hover{
+display:none;
+opacity:0;
+}
+ol.simplyslider-nav {
+    display:none;
+}
+ol.simplyslider-nav li a {
+   display:none;
+}
+
+}
+/* Landscape phone to portrait tablet */
+@media (min-width: 481px) and (max-width: 767px) { 
+.simplyslide-content{
+margin: 30px auto 0 auto;
+overflow: hidden;
+height: 100%;
+position: relative;
+text-align: center;
+top: 35%;
+}
+.simplyslide-content h1.simplyslider {
+  font-size:1.2em;
+  line-height:1.0em;
+  margin:0;
+  text-transform: uppercase;
+}
+.simplyslide-content h2.simplyslider {
+	margin: 0 0 16px;
+  position: relative;
+  text-align: center;
+}
+.simplyslide-content p.simplyslidetext {
+  font-size:0.8em;
+  line-height:1.0em;
+  margin:0.2em 0 0 0;
+  font-weight:200;
+  position: relative;
+  text-align: center;
+}
+.simplyslide-content p.simplyslidetextline1 span {
+  font-size:0.8em;
+  line-height:1.0em;
+  margin:0.2em 0 0 0;
+  font-weight:200;
+  position: relative;
+  text-align: center;
+}
+.simplyslide-content p.simplyslidetextline2 span {
+  font-size:0.8em;
+  line-height:1.0em;
+  margin:0.2em 0 0 0;
+  font-weight:200;
+  position: relative;
+  text-align: center;
+}
+.simplyslide-content p.simplyslidetextline3 span {
+  font-size:0.8em;
+  line-height:1.0em;
+  margin:0.2em 0 0 0;
+  font-weight:200;
+  position: relative;
+  text-align: center;
+}
+.simplyslides-container img.simplyslider{
+max-width: 43%;
+}
+.simplyslider-prev,
+.simplyslider-next {
+display: none;
+opacity:0;
+}
+.simplysliderslidedown{
+display:none;
+opacity:0;
+} 
+.simplysliderslidedown span i{
+display:none;
+opacity:0;
+} 
+.simplyslider-prev:hover,
+.simplyslider-next:hover{
+display:none;
+opacity:0;
+}
+ol.simplyslider-nav {
+    display:none;
+}
+ol.simplyslider-nav li a {
+   display:none;
+}
+
+}
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 991px) {
+.simplyslide-content {
+margin: 0 auto;
+overflow: hidden;
+height: 100%;
+position: relative;
+text-align: center;
+top: 25%;
+}
+.simplyslides-container {
+  top:40%;
+}
+.simplyslide-content h1.simplyslider {
+  font-size:4.0em;
+  margin:0.2em 0;
+  text-transform: uppercase;
+}
+.simplyslide-content h2.simplyslider {
+	margin: 0 0 26px;
+  position: relative;
+  text-align: center;
+}
+.simplyslide-content p.simplyslidetextline1 {
+  font-size:1.2em;
+  line-height:1.4em;
+  margin:0.4em 0;
+  font-weight:300;
+  position: relative;
+  text-align: center;
+}
+.simplyslide-content p.simplyslidetextline2 {
+  font-size:1.2em;
+  line-height:1.4em;
+  margin:0.4em 0;
+  font-weight:300;
+  position: relative;
+  text-align: center;
+}
+.simplyslide-content p.simplyslidetextline3 {
+  font-size:1.2em;
+  line-height:1.4em;
+  margin:0.4em 0;
+  font-weight:300;
+  position: relative;
+  text-align: center;
+}
+.simplyslider-prev,
+.simplyslider-next {
+display: none;
+opacity:0;
+}
+.simplysliderslidedown{
+display:none;
+opacity:0;
+} 
+.simplysliderslidedown span i {
+display:none;
+opacity:0;
+} 
+.simplyslider-prev:hover,
+.simplyslider-next:hover {
+display:none;
+opacity:0;
+}
+ol.simplyslider-nav {
+    display:none;
+}
+ol.simplyslider-nav li a {
+   display:none;
+}
+}
+/* Desktops and laptops ----------- */
+@media (min-width: 992px) and (max-width: 1024px) {
+.simplyslide-content {
+margin: 0 auto;
+overflow: hidden;
+height: 100%;
+position: relative;
+text-align: center;
+top: 24%;
+}
+.simplyslide-content h1.simplyslider {
+  font-size:4.0em;
+  margin:0.2em 0;
+  text-transform: uppercase;
+}
+.simplyslide-content h2.simplyslider {
+	margin: 0 0 26px;
+  position: relative;
+  text-align: center;
+}
+.simplyslide-content p.simplyslidetextline1 {
+  font-size:1.4em;
+  line-height:1.4em;
+  margin:0.4em 0;
+  font-weight:300;
+  position: relative;
+  text-align: center;
+}
+.simplyslide-content p.simplyslidetextline2 {
+  font-size:1.4em;
+  line-height:1.4em;
+  margin:0.4em 0;
+  font-weight:300;
+  position: relative;
+  text-align: center;
+}
+.simplyslide-content p.simplyslidetextline3 {
+  font-size:1.4em;
+  line-height:1.4em;
+  margin:0.4em 0;
+  font-weight:300;
+  position: relative;
+  text-align: center;
+}
+.simplyslides-container {
+  top:30%;
+}
+.simplyslider-prev,
+.simplyslider-next {
+display: none;
+opacity:0;
+}
+.simplysliderslidedown {
+	  text-align:center;
+    position:absolute;
+    top:33%;
+    left: 49%;
+    z-index:999;
+    margin: -4px 0 0 -16px;
+    color:#ffffff; 
+    font-size: 1.5em;
+}
+.simplyslider-prev:hover,
+.simplyslider-next:hover {
+display:none;
+opacity:0;
+}
+ol.simplyslider-nav {
+    display:none;
+}
+ol.simplyslider-nav li a {
+   display:none;
+}
+}
+/* Large screens ----------- */
+@media (min-width: 1025px) and (max-width: 3000px) {
+.simplyslides-container {
+  top:30%;
+}
+p.simplyslidetextline1 span {
+  font-size:2.8em;
+  font-weight:300;
+  position: relative;
+  text-align: center;
+}
+p.simplyslidetextline2 span {
+  font-size:2.8em;
+  font-weight:300;
+  position: relative;
+  text-align: center;
+}
+p.simplyslidetextline3 span {
+  font-size:2.8em;
+  font-weight:300;
+  position: relative;
+  text-align: center;
+}
+}  
